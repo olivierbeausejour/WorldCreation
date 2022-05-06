@@ -1,0 +1,17 @@
+#pragma once
+
+enum class Shape2dTypesEnum
+{
+	NONE = -1,
+	LINE = 0,
+	RECTANGLE = 1,
+	SQUARE = 2,
+	ELLIPSE = 3,
+	CIRCLE = 4,
+	TRIANGLE = 5,
+	RIGHT_TRIANGLE = 6,
+	FLOWER = 7,
+	VERTICAL_ARROW = 8,
+	HORIZONTAL_ARROW = 9,
+	BEZIER_CURVE = 10
+};

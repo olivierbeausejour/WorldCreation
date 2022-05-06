@@ -1,0 +1,43 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Debug-windows-x86_64 Build WorldCreation",
+            "type": "shell",
+            "command": "msbuild",
+            "args": [
+                "-p:Platform=x64",
+                "WorldCreation/WorldCreation.vcxproj"
+            ],
+            "group": "build",
+            "presentation": {
+                "reveal": "silent"
+            },
+            "problemMatcher": "$msCompile",
+            "dependsOn": "Generate project"
+        },
+        {
+            "label": "Debug-windows-x86_64 Build OpenFrameworks",
+            "type": "shell",
+            "command": "msbuild",
+            "args": [
+                "-p:Platform=x64",
+                "OpenFrameworks/OpenFrameworks.vcxproj"
+            ],
+            "group": "build",
+            "presentation": {
+                "reveal": "silent"
+            },
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "Generate project",
+            "type": "shell",
+            "command": "${workspaceFolder}\\GenerateProject.bat",
+            "group": "build",
+            "presentation": {
+                "reveal": "silent"
+            },  
+        },
+    ]
+}
